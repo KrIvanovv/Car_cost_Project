@@ -1,0 +1,62 @@
+#Car cost
+print("How much km per year? ")
+Km_year=int(input())
+print("How much does winter tyres cost?")
+winter_tyres=int(input())
+print("How much summer tyres cost?")
+summer_tyres=int(input())
+print("How much horsepower?")
+horse_power=int(input())
+print("What is the fuel? gas, a95 or disel?")
+fuel=str(input())
+g=0.86
+a95=2.85
+d=3.02
+print("What is the consumation of fuel?")
+consumation=int(input())
+C_km100=((Km_year/100)*consumation)
+repair_cost=float((horse_power*2) + (Km_year*float(0.04)))
+C_tyres=float(((winter_tyres+summer_tyres)/60000)*Km_year)
+tax=horse_power*1.4
+Tecnical=40
+insurance=200+(horse_power*0.35)
+road_tax=97
+tyres_change=60
+sum_fixed=tax+Tecnical+insurance+road_tax+tyres_change
+FF=0
+oil_filters=Km_year*0.02
+
+print("Fixed cost =")
+print("Year tax =",tax)
+print("Insurance =", insurance)
+print("Road tax =", road_tax)
+print("Technical review =", Tecnical)
+print("Change tyres =", tyres_change)
+print("")
+print("FIXED COST PER YEAR =", sum_fixed )
+print("")
+print("")
+
+print("Variable cost per year")
+
+if fuel == "gas":
+    FF=g * C_km100
+    print("Your fuel cost is =", FF, "per year")
+elif fuel == a95:
+    FF=a95 * C_km100
+    print("Your fuel cost is =", FF, "per year")
+elif fuel == d:
+    FF=d * C_km100
+    print(print("Your fuel cost is =", FF,)
+
+
+sum_variable = C_tyres + repair_cost + FF +oil_filters
+print("Oil and filters cost =", oil_filters)
+print("Repair cost =", repair_cost)
+print("Tyres cost =", C_tyres)
+print("")
+print("VARIABLE COST PER YEAR =", sum_variable)
+print("")
+print("")
+total_sum=sum_variable+sum_fixed
+print("TOTAL =", total_sum)
